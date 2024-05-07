@@ -17,6 +17,14 @@ export default defineConfig({
     open: true,
     // 主机名称
     host: 'localhost',
+    //跨域 配置
+    proxy:{
+      '/api':{
+        target:'http://localhost:7777',
+        changeOrigin:true,
+        rewrite:(path)=>path.replace(/^\/api/,'')
+      }
+    }
   },
   resolve: {
     alias: {

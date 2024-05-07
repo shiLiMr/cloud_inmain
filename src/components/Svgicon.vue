@@ -13,14 +13,13 @@ const props = withDefaults(
 
 import { h, resolveComponent } from 'vue'
 const svg_icon = () => {
-    if (props.icon) { 
-        return h(resolveComponent('el-icon'), { color: props.color, size: props.size }, () => h(resolveComponent(props.icon))
+    if (props.icon) {
+        return h(resolveComponent('el-icon'), { color: props.color, size: props.size }, [ h(resolveComponent(props.icon))]
         )
     }
 }
 
-// import { h } from 'vue';
-// const vnode=h('div',{},['123',h('span',{style:{color:'red'}},['123'],)])
+//const vnode=h('div',{color:'red',size:'16px'},['1234567899'])
 
 </script>
 <template>
