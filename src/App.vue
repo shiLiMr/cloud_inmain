@@ -2,13 +2,15 @@
 import {  RouterView } from 'vue-router'
 import Svgicon from './components/Svgicon.vue'
 import  request  from './utils/request'
+import {getmenus} from './api'
 
 const add=async ()=>{
-  const res=await request({
-    url:'',
-    method:'get',
+  // const res=await request({
+  //   url:'',
+  //   method:'get',
    
-  })
+  // })
+  const res=await getmenus()
   console.log(res)
 }
 </script>

@@ -14,4 +14,6 @@ app.use(ElementPlus) //
 app.use(createPinia())
 app.use(router)
 
+console.log(import.meta.env.VITE_APP_BASE_API)
+
 app.mount('#app')
