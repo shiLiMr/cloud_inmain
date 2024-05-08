@@ -3,7 +3,7 @@
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import type { App } from 'vue'
 
-import Svgicon from '@/components/Svgicon.vue'  // 引入自定义icon 组件
+import SvgIcon from '@/components/Svgicon.vue'  // 引入自定义icon 组件
 
 export default{
     install(app:App){
@@ -13,7 +13,7 @@ export default{
         }
         
         // 注册自定义icon 组件
-        app.component('Svgicon', Svgicon)
+        app.component('SvgIcon', SvgIcon)
 
     }
 }

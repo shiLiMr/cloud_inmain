@@ -1,4 +1,59 @@
+:root{
+    --jy-color-white: #fff;
+    --jy-color-primary: #1966ff;
+    --jy-color-index:#2b2f38;
+}
+
+
 
 .el-container{
     height: 100vh;
+}
+
+// 侧边栏 -----------------------------------------------------------------
+.el-aside{
+    .aside-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        color: var(--jy-color-primary);
+        >img{
+            width: 45px;
+        }
+        >div{
+            margin-left: 10px;
+            font-size: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+    }
+    .el-menu{
+        border: none;
+        .el-sub-menu__title,.el-menu-item{
+            color: var(--jy-color-index) !important;
+            background-color: var(--jy-color-white) !important;
+        }
+        //鼠标滑过央视
+        .el-menu-item:hover{
+            color: var(--jy-color-white) !important;
+            background-color: var(--jy-color-index) !important;
+        }
+        //选中样式
+        .el-menu-item.is-active{
+            color: var(--jy-color-white) !important;
+            background-color: var(--jy-color-index) !important;
+        }
+        
+    }
+}
+
+
+.el-header{
+    background-color: pink;
+}
+
+.el-main{
+    background-color: #f0f2f5;
 }

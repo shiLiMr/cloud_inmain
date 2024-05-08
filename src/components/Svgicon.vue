@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+import { h, resolveComponent } from 'vue'
 
 // withDefaults(
 //     defineProps<{icon:string,color?:string,size?:string|number}>(),{
@@ -11,10 +12,9 @@ const props = withDefaults(
 }
 )
 
-import { h, resolveComponent } from 'vue'
-const svg_icon = () => {
+const rander = () => {
     if (props.icon) {
-        return h(resolveComponent('el-icon'), { color: props.color, size: props.size }, [ h(resolveComponent(props.icon))]
+        return h(resolveComponent('el-icon'), { color: props.color, size: props.size },()=> h(resolveComponent(props.icon))
         )
     }
 }
@@ -25,7 +25,7 @@ const svg_icon = () => {
 <template>
     <!-- <vnode /> -->
 
-    <svg_icon />
+    <rander />
 
     <!-- <el-icon :color="color" :size="size">
         <component :is="icon"></component>

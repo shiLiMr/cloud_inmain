@@ -1,7 +1,5 @@
 <template>
-<el-main >
-    <router-view></router-view>
-</el-main>
+首页
 </template>
 <script setup lang='ts'>
 

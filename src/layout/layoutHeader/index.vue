@@ -1,5 +1,5 @@
 <template>
-<el-header style="background-color: bisque;">Header</el-header>
+<el-header>Header</el-header>
 </template>
 <script setup lang='ts'>
 

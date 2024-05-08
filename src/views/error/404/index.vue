@@ -1,7 +1,5 @@
 <template>
-<el-main >
-    <router-view></router-view>
-</el-main>
+404 没有找到页面
 </template>
 <script setup lang='ts'>
 
