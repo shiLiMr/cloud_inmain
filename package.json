@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
-    "test":" vite --mode test ",
-    "a":"vite --mode test",
+    "test": " vite --mode test ",
+    "a": "vite --mode test",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force"
@@ -26,6 +26,8 @@
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/tsconfig": "^0.5.1",
     "npm-run-all2": "^6.1.2",
+    "sas": "^3.0.4",
+    "sass": "^1.77.0",
     "typescript": "~5.4.0",
     "vite": "^5.2.8",
     "vue-tsc": "^2.0.11"

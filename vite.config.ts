@@ -12,6 +12,7 @@ export default defineConfig(({mode})=>{
       vue(),
       vueJsx(),
     ],
+    base:'./',
     server:{
       //端口号
       port: 8888,
