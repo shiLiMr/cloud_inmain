@@ -13,7 +13,7 @@ const routerss: RouteRecordRaw[] = [
         component: () => import('@/views/index/index.vue'),
         meta: {
           title: '首页',
-          icon: 'home',
+          icon: 'House',
           keepAlive: false, //是否缓存
           hidden: false, // 是否显示
         }
@@ -23,10 +23,11 @@ const routerss: RouteRecordRaw[] = [
         name: 'System',
         meta:{
           title:'系统管理',
-          icon:'system',
+          icon:'Setting',
           keepAlive:false, //是否缓存
           hidden:false, // 是否显示
         },
+        redirect: '/system/menu',
         children: [
           {
             path: '/system/menu',

@@ -1,5 +1,5 @@
 <template>
-<el-aside width="200px" >
+<el-aside  :class="store.isCollapse? 'aside-60':'aside-200'" >
     <!-- logo -->
     <laylogo></laylogo>
     <!-- menus -->
@@ -11,6 +11,8 @@ import { defineAsyncComponent } from 'vue';
 const laylogo=defineAsyncComponent(()=>import('@/layout/layoutAside/Logo.vue'))
 const laymenus=defineAsyncComponent(()=>import('@/layout/layoutAside/Menus.vue'))
 
+import { useIsCollStore } from '@/stores/useIsColl';
+const store = useIsCollStore();
 </script>
 <style lang='scss' scoped>
 

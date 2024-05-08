@@ -1,6 +1,6 @@
 <template>
-    <el-menu active-text-color="#ffd04b" background-color="transparent" class="el-menu-vertical-demo" :default-active="$route.path" router
-        text-color="#fff">
+    <el-menu active-text-color="#ffd04b" background-color="transparent" class="el-menu-vertical-demo"
+        :default-active="$route.path" router :default-openeds="['/system']" :collapse="store.isCollapse">
         <el-menu-item index="/home">
             <svg-icon icon="House"></svg-icon>
             <span>首页</span>
@@ -10,18 +10,18 @@
                 <svg-icon icon="Setting"></svg-icon>
                 <span>系统管理</span>
             </template>
-                <el-menu-item index="/system/menu">
-                    <svg-icon icon="Menu"></svg-icon>
-                    <span>菜单管理</span>
-                </el-menu-item>
-                <el-menu-item index="/system/role">
-                    <svg-icon icon="HomeFilled"></svg-icon>
-                    <span>角色管理</span>
-                </el-menu-item>
-                <el-menu-item index="/system/user">
-                    <svg-icon icon="User"></svg-icon>
-                    <span>用户管理</span>
-                </el-menu-item>
+            <el-menu-item index="/system/menu">
+                <svg-icon icon="Menu"></svg-icon>
+                <span>菜单管理</span>
+            </el-menu-item>
+            <el-menu-item index="/system/role">
+                <svg-icon icon="HomeFilled"></svg-icon>
+                <span>角色管理</span>
+            </el-menu-item>
+            <el-menu-item index="/system/user">
+                <svg-icon icon="User"></svg-icon>
+                <span>用户管理</span>
+            </el-menu-item>
         </el-sub-menu>
         <el-sub-menu index="/goods">
             <template #title>
@@ -51,6 +51,8 @@
     </el-menu>
 </template>
 <script setup lang='ts'>
+import { useIsCollStore } from '@/stores/useIsColl';
+const store = useIsCollStore();
 
 
 </script>
