@@ -6,27 +6,40 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig(({mode})=>{
-  const env=loadEnv(mode,process.cwd())
-   return {
+  //加载环境变量的内容
+  const env = loadEnv(mode, process.cwd())
+  return {
     plugins: [
       vue(),
       vueJsx(),
     ],
-    base:'./',
-    server:{
+    base: './',
+    server: {
       //端口号
       port: 8888,
       // 是否自动打开浏览器
       open: true,
-      // 主机名称
+      // 主机名
       host: 'localhost',
-      //跨域 配置
-      proxy:{
-        [env.VITE_APP_BASE_API]:{
-          target:'http://localhost:7777',
-          changeOrigin:true,
-          rewrite:(path)=>path.replace(/`^${env.VITE_APP_BASE_API}`/,'')
-        }
+      // 跨域
+      proxy: {
+        // '/dev-api': {
+          [env.VITE_APP_BASE_API]:{
+            // 要跨域的地址
+            // target: 'http://localhost:7777',
+            target: 'https://mock.apifox.com/m1/4458460-0-default',
+            
+            changeOrigin: true, //开启跨域
+            // rewrite: (path) => path.replace(/^`${env.VITE_APP_BASE_API}`/, "")
+            rewrite: (path) => path.replace(new RegExp('^' + `${env.VITE_APP_BASE_API}`), "")
+          }
+        // [import.meta.env.VITE_APP_BASE_API]: {
+        //   //要跨域的地址
+        //   target: 'http://localhost:7777',
+        //   changeOrigin: true,
+        //   //路径重写
+        //   rewrite: (path) => path.replace(/^\import.meta.env.VITE_APP_BASE_API/, '')
+        // }
       }
     },
     resolve: {

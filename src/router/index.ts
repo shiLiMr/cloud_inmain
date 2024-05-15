@@ -2,6 +2,11 @@ import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 
 const routerss: RouteRecordRaw[] = [
   {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/login/index.vue'),
+  },
+  {
     path: '/',
     name: 'Layout',
     component: () => import('@/layout/index.vue'),
@@ -14,7 +19,7 @@ const routerss: RouteRecordRaw[] = [
         meta: {
           title: '首页',
           icon: 'House',
-          keepAlive: false, //是否缓存
+          keepAlive: true, //是否缓存
           hidden: false, // 是否显示
         }
       },

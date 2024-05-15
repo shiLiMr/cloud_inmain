@@ -1,5 +1,5 @@
 <template>
-商品列表
+<div>商品列表</div>
 </template>
 <script setup lang='ts'>
 

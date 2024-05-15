@@ -1,5 +1,5 @@
 <template>
-忧思安
+<div>忧思安</div>
 </template>
 <script setup lang='ts'>
 
